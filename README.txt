@@ -11,8 +11,8 @@ assets/       圖片與影片（必須和 index.html 放在同一層）
 免費快速上線：打開 https://app.netlify.com/drop ，把整個「nami-site」資料夾拖進去，約一分鐘就會拿到網址。
 
 【之後要替換的檔案】
-assets/nami-intro.mp4         首屏影片（目前有 HeyGen 浮水印，換成無浮水印版本時檔名保持一樣即可）
-assets/nami-intro-poster.jpg  影片載入前顯示的畫面
+assets/nami-video1.mp4        首屏影片（第二、三段為 nami-video2.mp4、nami-video3.mp4；替換時檔名保持一樣即可）
+assets/nami-video*-poster.jpg 影片載入前顯示的畫面
 
 【連結】
 所有報名／諮詢／領報告按鈕都連到 LINE：https://lin.ee/vCed8SL
