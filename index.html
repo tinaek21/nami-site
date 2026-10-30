@@ -129,20 +129,24 @@ section{scroll-margin-top:100px}
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:24px">
 <div class="calc-box" style="flex:1 1 420px;min-width:0;background:rgba(255,255,255,0.75);border:1px solid #EAD3CE;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:18px">
-<h3 style="margin:0;font-family:'Noto Serif TC',Georgia,serif;font-size:24px;color:#7A3E48">輸入生日，馬上算</h3>
-<label for="birth" style="font-size:15px;color:#85595F">出生年月日（陽曆、農曆可分別計算）</label>
+<h3 style="margin:0;font-family:'Noto Serif TC',Georgia,serif;font-size:24px;color:#7A3E48">輸入生日，算出你的主命數</h3>
+<label for="birth" style="font-size:15px;line-height:1.7;color:#85595F">直接打字輸入西元生日，例如 1993/02/05 或 19930205；也可以點右邊的日曆選日期。</label>
 <div style="display:flex;flex-wrap:wrap;gap:12px">
-<input id="birth" type="date" style="flex:1 1 200px;min-height:48px;padding:0 16px;font-size:17px;font-family:inherit;color:#5E4A50;background:#FFFCFA;border:1px solid #D9B5B5;border-radius:14px">
-<button type="button" id="calc-btn" style="min-height:48px;padding:0 28px;border:none;border-radius:999px;background:#A85C6B;color:#FFF8F5;font-size:17px;font-family:inherit;font-weight:500;cursor:pointer">計算</button>
+<div style="flex:1 1 220px;min-width:0;position:relative;display:flex">
+<input id="birth" type="text" inputmode="numeric" autocomplete="bday" placeholder="例如 1993/02/05" style="flex:1;min-width:0;min-height:52px;padding:0 56px 0 16px;font-size:18px;font-family:inherit;color:#5E4A50;background:#FFFCFA;border:1px solid #D9B5B5;border-radius:14px;box-sizing:border-box">
+<button type="button" id="picker-btn" aria-label="用日曆選擇生日" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:44px;height:44px;border:none;border-radius:10px;background:transparent;color:#9B5163;cursor:pointer;display:flex;align-items:center;justify-content:center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4"></path><path d="M8 2v4"></path><path d="M3 10h18"></path></svg></button>
+<input id="birth-picker" type="date" tabindex="-1" aria-hidden="true" style="position:absolute;right:8px;bottom:0;width:1px;height:1px;opacity:0;border:0;padding:0;pointer-events:none">
+</div>
+<button type="button" id="calc-btn" style="min-height:52px;padding:0 28px;border:none;border-radius:999px;background:#A85C6B;color:#FFF8F5;font-size:17px;font-family:inherit;font-weight:700;cursor:pointer">算出我的主命數</button>
 </div>
 <p id="calc-err" role="alert" hidden style="margin:0;font-size:15px;color:#9B5163"></p>
-<div id="calc-result" hidden style="display:flex;flex-direction:column;gap:10px;background:#F7EBEA;border-radius:20px;padding:22px">
-<p style="margin:0;font-size:15px;line-height:1.7" id="calc-steps"></p>
-<p style="margin:0;font-size:15px;line-height:1.7" id="calc-sum"></p>
-<p style="margin:0;font-family:'Noto Serif TC',Georgia,serif;font-size:22px;font-weight:700;color:#7A3E48">你的主命數寫法：<span id="calc-chain"></span></p>
-<p style="margin:0;font-size:17px">主修數字為 <b style="color:#A85C6B;font-size:22px" id="calc-main"></b>，你的戀愛劇本是「<span id="calc-role"></span>」。</p>
-<a href="#energy" style="align-self:flex-start;font-size:16px;padding:8px 0">看我的戀愛劇本 →</a>
-<a href="#gift" style="align-self:flex-start;font-size:16px;padding:4px 0 8px">想看完整解析？領取免費報告 →</a>
+<div id="calc-result" hidden style="display:flex;flex-direction:column;align-items:center;gap:14px;background:#FFFFFF;border:1px solid #EAD3CE;border-radius:24px;padding:28px 20px;text-align:center">
+<p style="margin:0;font-family:'Noto Serif TC',Georgia,serif;font-size:22px;font-weight:700;color:#7A3E48">你的主命數是</p>
+<div id="calc-ball" style="width:136px;height:136px;border-radius:50%;background:#A85C6B;border:5px solid #FFFFFF;box-shadow:0 14px 36px rgba(150,90,100,0.30);display:flex;align-items:center;justify-content:center"><span style="font-family:'Noto Serif TC',Georgia,serif;font-size:84px;font-weight:700;line-height:1;color:#FFFFFF" id="calc-main"></span></div>
+<a href="#script-card" id="calc-role-link" style="font-family:'Noto Serif TC',Georgia,serif;font-size:clamp(28px,4vw,36px);font-weight:700;line-height:1.3;color:#7A3E48;text-decoration:underline;text-decoration-color:#A85C6B;text-decoration-thickness:4px;text-underline-offset:8px;padding:4px 0"><span id="calc-role"></span> →</a>
+<p style="margin:0;font-size:15px;color:#85595F">點上面的角色名稱，看你的完整戀愛劇本</p>
+<p style="margin:6px 0 0;font-size:14px;line-height:1.7;color:#85595F">計算過程：<span id="calc-steps"></span><br>主命數寫法：<span id="calc-chain"></span></p>
+<a href="#gift" style="font-size:16px;font-weight:500;padding:6px 0">想看完整解析？領取免費報告 →</a>
 </div>
 </div>
 <div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:12px">
@@ -505,22 +509,48 @@ document.addEventListener('click', function (e) {
   var b = e.target.closest('[data-pick]');
   if (b) { pick(b.getAttribute('data-pick'), true); }
 });
-$('calc-btn').addEventListener('click', function () {
-  var v = $('birth').value || '';
+function parseBirth(v) {
+  v = String(v || '').trim();
+  var parts = v.split(/[^0-9]+/).filter(Boolean), y, m, d;
+  if (parts.length === 3) { y = parts[0]; m = parts[1]; d = parts[2]; }
+  else if (parts.length === 1 && parts[0].length === 8) { y = parts[0].slice(0, 4); m = parts[0].slice(4, 6); d = parts[0].slice(6, 8); }
+  else { return null; }
+  if (y.length !== 4 || m.length > 2 || d.length > 2) { return null; }
+  m = ('0' + m).slice(-2); d = ('0' + d).slice(-2);
+  var yi = Number(y), mi = Number(m), di = Number(d);
+  if (yi < 1900 || yi > 2100 || mi < 1 || mi > 12 || di < 1 || di > 31) { return null; }
+  return { y: y, m: m, d: d };
+}
+function calcBirth(raw) {
   var err = $('calc-err'), res = $('calc-result');
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(v)) { err.textContent = '請先選擇完整的出生年月日。'; err.hidden = false; res.hidden = true; return; }
+  var b = parseBirth(raw);
+  if (!b) { err.textContent = '生日格式看不懂，請輸入像 1993/02/05 或 19930205 這樣的西元生日。'; err.hidden = false; res.hidden = true; return; }
   err.hidden = true;
-  var p = v.split('-'), y = p[0], m = p[1], dd = p[2];
-  var ys = digitSum(y), ms = digitSum(m), ds = digitSum(dd);
-  var t = ys + ms + ds, chain = [t];
-  while (t > 9) { t = digitSum(t); chain.push(t); }
-  $('calc-steps').textContent = '拆解　年：' + y.split('').join('+') + ' = ' + ys + '　月：' + m[0] + '+' + m[1] + ' = ' + ms + '　日：' + dd[0] + '+' + dd[1] + ' = ' + ds;
-  $('calc-sum').textContent = '相加　總和：' + ys + ' + ' + ms + ' + ' + ds + ' = ' + chain[0];
+  $('birth').value = b.y + '/' + b.m + '/' + b.d;
+  var digits = (b.y + b.m + b.d).split('');
+  var total = digits.reduce(function (a, c) { return a + Number(c); }, 0);
+  var t = total, chain = [t], steps = digits.join('+') + ' = ' + total;
+  while (t > 9) { var parts = String(t).split(''); t = digitSum(t); chain.push(t); steps += ' → ' + parts.join('+') + ' = ' + t; }
+  var x = NUMS[String(t)];
+  $('calc-steps').textContent = steps;
   $('calc-chain').textContent = chain.join('/');
   $('calc-main').textContent = String(t);
-  $('calc-role').textContent = NUMS[String(t)].role;
+  $('calc-ball').style.background = x.tone;
+  $('calc-role').textContent = x.role;
+  $('calc-role-link').style.textDecorationColor = x.tone;
   res.hidden = false;
   pick(String(t), false);
+  setTimeout(function () { if (res.getBoundingClientRect().top > window.innerHeight - 160) { res.scrollIntoView({ behavior: 'smooth', block: 'center' }); } }, 60);
+}
+$('calc-btn').addEventListener('click', function () { calcBirth($('birth').value); });
+$('birth').addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); calcBirth($('birth').value); } });
+$('picker-btn').addEventListener('click', function () {
+  var el = $('birth-picker');
+  try { if (el.showPicker) { el.showPicker(); } else { el.click(); } } catch (e2) { el.click(); }
+});
+$('birth-picker').addEventListener('change', function (e) {
+  var v = (e.target.value || '').replace(/-/g, '/');
+  if (v) { $('birth').value = v; calcBirth(v); }
 });
 var soundOn = '';
 var soundBtns = Array.prototype.slice.call(document.querySelectorAll('.sound-btn'));
