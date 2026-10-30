@@ -15,7 +15,7 @@ assets/nami-video1.mp4        首屏影片（第二、三段為 nami-video2.mp4�
 assets/nami-video*-poster.jpg 影片載入前顯示的畫面
 
 【連結】
-所有報名／諮詢／領報告按鈕都連到 LINE：https://lin.ee/vCed8SL
+所有預約諮詢／領報告按鈕都連到 LINE：https://lin.ee/vCed8SL
 在 index.html 裡搜尋「lin.ee」就能一次找到全部。
 
 【建議】
