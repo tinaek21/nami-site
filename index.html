@@ -195,8 +195,8 @@ section{scroll-margin-top:100px}
 <div id="d-tags" style="display:flex;flex-wrap:wrap;gap:10px"></div>
 <dl class="script-dl" style="margin:0;display:flex;flex-direction:column">
 <div style="display:flex;flex-wrap:wrap;gap:6px 20px;padding:16px 0;border-top:1px solid #EAD3CE"><dt style="width:110px;font-size:15px;font-weight:500;color:#9B5163;line-height:1.8">浪漫表現</dt><dd style="margin:0;flex:1 1 280px;min-width:0"><ul id="d-romance" style="margin:0;padding-left:20px;font-size:17px;line-height:1.8"></ul></dd></div>
-<div style="display:flex;flex-wrap:wrap;gap:6px 20px;padding:16px 0;border-top:1px solid #EAD3CE"><dt style="width:110px;font-size:15px;font-weight:500;color:#9B5163;line-height:1.8">契合角色</dt><dd style="margin:0;flex:1 1 280px;min-width:0;display:flex;flex-wrap:wrap;gap:8px" id="d-match"></dd></div>
-<div style="display:flex;flex-wrap:wrap;gap:6px 20px;padding:16px 0;border-top:1px solid #EAD3CE"><dt style="width:110px;font-size:15px;font-weight:500;color:#9B5163;line-height:1.8">相剋角色</dt><dd style="margin:0;flex:1 1 280px;min-width:0;display:flex;flex-wrap:wrap;gap:8px" id="d-clash"></dd></div>
+<div style="display:flex;flex-wrap:wrap;gap:6px 20px;padding:16px 0;border-top:1px solid #EAD3CE"><dt style="width:110px;font-size:15px;font-weight:500;color:#9B5163;line-height:1.8">戀愛天賦</dt><dd style="margin:0;flex:1 1 280px;min-width:0;font-size:17px;line-height:1.8"><b style="color:#7A3E48" id="d-giftkey"></b>｜<span id="d-gift"></span></dd></div>
+<div style="display:flex;flex-wrap:wrap;gap:6px 20px;padding:16px 0;border-top:1px solid #EAD3CE"><dt style="width:110px;font-size:15px;font-weight:500;color:#9B5163;line-height:1.8">愛情功課</dt><dd style="margin:0;flex:1 1 280px;min-width:0;font-size:17px;line-height:1.8"><b style="color:#7A3E48" id="d-lessonkey"></b>｜<span id="d-lesson"></span></dd></div>
 <div id="d-lucky-row" style="display:flex;flex-wrap:wrap;gap:6px 20px;padding:16px 0;border-top:1px solid #EAD3CE"><dt style="width:110px;font-size:15px;font-weight:500;color:#9B5163;line-height:1.8">幸運小物</dt><dd style="margin:0;flex:1 1 280px;font-size:17px;line-height:1.8" id="d-lucky"></dd></div>
 <div style="border-top:1px solid #EAD3CE"></div>
 </dl>
@@ -466,15 +466,15 @@ section{scroll-margin-top:100px}
 </div>
 <script>
 var NUMS = {
-  '1': { n: '1', en: 'Number One', role: '愛的大學教授', tags: ['#專一','#獨立','#創造','#領導'], romance: ['主導一切就有安全感','超專注研究對方','專門追人的'], match: ['2'], clash: ['1','4','7'], lucky: '紅寶石、鑰匙、紅色內褲、火龍果或辣椒', tone: '#E85D5A', light: '#F49A97' },
-  '2': { n: '2', en: 'Number Two', role: '愛的合夥人', tags: ['#溫柔','#傾聽','#陪伴','#配合'], romance: ['人人好是為了和諧','動手製作愛的禮物','依靠讓我有安全感的對象','白頭偕老'], match: ['1','6'], clash: ['2','9'], lucky: '深橙色皮革小件、背包', tone: '#F7A14A', light: '#FBC78C' },
-  '3': { n: '3', en: 'Number Three', role: '愛的藝術總監', tags: ['#自由','#溝通','#好奇','#樂觀'], romance: ['先做個朋友嘛～','外貌協會','用音樂與歌聲表達愛','溝通彼此的需求','魂被美色牽走'], match: ['3','9'], clash: ['4','7'], lucky: '黃水晶、精油', tone: '#F5C518', light: '#FADC66' },
-  '4': { n: '4', en: 'Number Four', role: '愛的國王皇后', tags: ['#務實','#責任感','#穩定','#冷靜'], romance: ['買房的安排我都想好了','戀愛條約這邊簽名','有道理我就聽一下','外人關我屁事'], match: ['2','9'], clash: ['1','4','8'], lucky: '玉或翡翠、多肉植物', tone: '#5DBE8A', light: '#93D6B1' },
-  '5': { n: '5', en: 'Number Five', role: '愛的冒險勇士', tags: ['#戶外','#冒險','#正義','#自由'], romance: ['把對方放心上','遠距離戀情','跟隨心的聲音','為愛勇敢'], match: ['1','2','7'], clash: ['4','8'], lucky: '孔雀石、藍色寶石、海浪裝飾品', tone: '#4AABD3', light: '#86C8E4' },
-  '6': { n: '6', en: 'Number Six', role: '愛的療癒天使', tags: ['#高貴','#善解人意','#慈悲','#有愛心'], romance: ['照顧你就是愛你','完美主義','同理對方','願意付出'], match: ['1','2'], clash: ['7','9'], lucky: '藍莓、蠟染服裝、靛色手提包', tone: '#4F5BD5', light: '#8A92E6' },
-  '7': { n: '7', en: 'Number Seven', role: '愛的幸運兒', tags: ['#好運','#第六感','#質疑','#緊張'], romance: ['送對方禮物','智性戀','充實兩性知識','相互信任放鬆相處'], match: ['7'], clash: ['1','3','4'], lucky: '紫水晶、薰衣草精油', tone: '#9B6FD8', light: '#C3A6EA' },
-  '8': { n: '8', en: 'Number Eight', role: '愛的霸道總裁', tags: ['#權力','#洞察遠見','#執行力','#資源'], romance: ['經營感情是一種投資','我喜歡曖昧的感覺','挑逗對方很有成就感'], match: ['1','2'], clash: ['4','8'], lucky: '金飾、金屬花瓶', tone: '#C9A227', light: '#E2C66A' },
-  '9': { n: '9', en: 'Number Nine', role: '愛的靈魂伴侶', tags: ['#博愛','#分享','#樂觀','#同理心'], romance: ['崇拜偶像','交友軟體聊到另一半','隨緣吧','成全你們'], match: ['3','4'], clash: ['1','5'], lucky: '白襯衫、瓷器', tone: '#A8A8A8', light: '#CDCDCD' }
+  '1': { n: '1', en: 'Number One', role: '愛的大學教授', tags: ['#專一','#獨立','#創造','#領導'], romance: ['主導一切就有安全感','超專注研究對方','專門追人的'], giftKey: '專注', gift: '一旦認定，就全心投入', lessonKey: '獨立', lesson: '在愛裡保有自己，也給對方空間', lucky: '紅寶石、鑰匙、紅色內褲、火龍果或辣椒', tone: '#E85D5A', light: '#F49A97' },
+  '2': { n: '2', en: 'Number Two', role: '愛的合夥人', tags: ['#溫柔','#傾聽','#陪伴','#配合'], romance: ['人人好是為了和諧','動手製作愛的禮物','依靠讓我有安全感的對象','白頭偕老'], giftKey: '傾聽', gift: '最懂得陪伴與配合', lessonKey: '包容', lesson: '溫柔接住對方，也記得說出自己的需要', lucky: '深橙色皮革小件、背包', tone: '#F7A14A', light: '#FBC78C' },
+  '3': { n: '3', en: 'Number Three', role: '愛的藝術總監', tags: ['#自由','#溝通','#好奇','#樂觀'], romance: ['先做個朋友嘛～','外貌協會','用音樂與歌聲表達愛','溝通彼此的需求','魂被美色牽走'], giftKey: '溝通', gift: '有趣又會說話，讓關係充滿笑聲', lessonKey: '變化', lesson: '讓愛保持新鮮，也學會把話說到重點', lucky: '黃水晶、精油', tone: '#F5C518', light: '#FADC66' },
+  '4': { n: '4', en: 'Number Four', role: '愛的國王皇后', tags: ['#務實','#責任感','#穩定','#冷靜'], romance: ['買房的安排我都想好了','戀愛條約這邊簽名','有道理我就聽一下','外人關我屁事'], giftKey: '穩定', gift: '可靠負責，給人滿滿安全感', lessonKey: '安全', lesson: '給彼此穩定的承諾，也允許一點意外', lucky: '玉或翡翠、多肉植物', tone: '#5DBE8A', light: '#93D6B1' },
+  '5': { n: '5', en: 'Number Five', role: '愛的冒險勇士', tags: ['#戶外','#冒險','#正義','#自由'], romance: ['把對方放心上','遠距離戀情','跟隨心的聲音','為愛勇敢'], giftKey: '熱情', gift: '勇敢追愛，帶對方看見更大的世界', lessonKey: '自由', lesson: '在關係裡自由呼吸，也願意為愛停留', lucky: '孔雀石、藍色寶石、海浪裝飾品', tone: '#4AABD3', light: '#86C8E4' },
+  '6': { n: '6', en: 'Number Six', role: '愛的療癒天使', tags: ['#高貴','#善解人意','#慈悲','#有愛心'], romance: ['照顧你就是愛你','完美主義','同理對方','願意付出'], giftKey: '照顧', gift: '善解人意，把對方照顧得無微不至', lessonKey: '愛', lesson: '付出之前，先好好愛自己', lucky: '藍莓、蠟染服裝、靛色手提包', tone: '#4F5BD5', light: '#8A92E6' },
+  '7': { n: '7', en: 'Number Seven', role: '愛的幸運兒', tags: ['#好運','#第六感','#質疑','#緊張'], romance: ['送對方禮物','智性戀','充實兩性知識','相互信任放鬆相處'], giftKey: '直覺', gift: '第六感敏銳，總能感覺到對方的心', lessonKey: '幸福', lesson: '相信直覺，也練習放下懷疑', lucky: '紫水晶、薰衣草精油', tone: '#9B6FD8', light: '#C3A6EA' },
+  '8': { n: '8', en: 'Number Eight', role: '愛的霸道總裁', tags: ['#權力','#洞察遠見','#執行力','#資源'], romance: ['經營感情是一種投資','我喜歡曖昧的感覺','挑逗對方很有成就感'], giftKey: '遠見', gift: '懂得規劃，能把感情經營得長久', lessonKey: '成就', lesson: '把經營的能力用在感情，也學會示弱', lucky: '金飾、金屬花瓶', tone: '#C9A227', light: '#E2C66A' },
+  '9': { n: '9', en: 'Number Nine', role: '愛的靈魂伴侶', tags: ['#博愛','#分享','#樂觀','#同理心'], romance: ['崇拜偶像','交友軟體聊到另一半','隨緣吧','成全你們'], giftKey: '同理', gift: '心胸寬大，最能理解對方', lessonKey: '夢想', lesson: '擁抱浪漫想像，也活在真實的相處裡', lucky: '白襯衫、瓷器', tone: '#A8A8A8', light: '#CDCDCD' }
 };
 var ORDER = ['1','2','3','4','5','6','7','8','9'];
 var sel = '1';
@@ -499,8 +499,8 @@ function renderCard() {
   $('d-en').textContent = d.en; $('d-role').textContent = d.role;
   $('d-tags').innerHTML = d.tags.map(function (t) { return '<span style="font-size:15px;color:#7A3E48;background:#FBF4F1;border:1px solid #E3C3BE;padding:6px 16px;border-radius:999px">' + esc(t) + '</span>'; }).join('');
   $('d-romance').innerHTML = d.romance.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('');
-  $('d-match').innerHTML = d.match.map(chip).join('');
-  $('d-clash').innerHTML = d.clash.map(chip).join('');
+  $('d-giftkey').textContent = d.giftKey; $('d-gift').textContent = d.gift;
+  $('d-lessonkey').textContent = d.lessonKey; $('d-lesson').textContent = d.lesson;
   $('d-lucky-row').hidden = !d.lucky; $('d-lucky').textContent = d.lucky;
 }
 function pick(k, reveal) {
