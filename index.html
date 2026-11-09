@@ -15,6 +15,10 @@ body{margin:0;background:#FBF4F1;color:#5E4A50;font-family:'Noto Sans TC',Arial,
 html{scroll-behavior:smooth}
 a{color:#9B5163}a:hover{color:#7A3E48}
 input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #9B5163;outline-offset:3px}
+.more-btn::-webkit-details-marker{display:none}
+details.more[open] .lbl-more{display:none}
+details.more:not([open]) .lbl-less{display:none}
+details.more[open] .more-btn svg{transform:rotate(180deg)}
 section{scroll-margin-top:72px}
 #birth-picker::-webkit-calendar-picker-indicator{position:absolute;top:0;left:0;right:0;bottom:0;width:auto;height:auto;margin:0;padding:0;opacity:0;cursor:pointer}
 #birth-picker::-webkit-datetime-edit{display:none}
@@ -270,12 +274,15 @@ section{scroll-margin-top:100px}
 <p class="eb" style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:16px;letter-spacing:8px;color:#85595F">AS FEATURED IN</p>
 <p style="margin:0;max-width:52em;font-family:'Noto Serif TC',Georgia,serif;font-size:17px;font-weight:500;line-height:2;color:#7A3E48"><span style="white-space:nowrap">中視《網路溫度計》</span><span aria-hidden="true" style="color:#D9B5B5">　｜　</span><span style="white-space:nowrap">數位時代</span><span aria-hidden="true" style="color:#D9B5B5">　｜　</span><span style="white-space:nowrap">《戀愛會社》節目主持</span><span aria-hidden="true" style="color:#D9B5B5">　｜　</span><span style="white-space:nowrap">Facebook #SheMeansBusiness</span><span aria-hidden="true" style="color:#D9B5B5">　｜　</span><span style="white-space:nowrap">Girls in Tech</span><span aria-hidden="true" style="color:#D9B5B5">　｜　</span><span style="white-space:nowrap">資策會 IDEAS</span><span aria-hidden="true" style="color:#D9B5B5">　｜　</span><span style="white-space:nowrap">政大・中原・高雄科大</span></p>
 <div style="width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:16px;align-items:start;margin-top:12px;text-align:left">
-<details style="background:#FFFFFF;border:1px solid #EAD3CE;border-radius:20px;padding:0 22px"><summary style="cursor:pointer;padding:18px 0;font-size:17px;font-weight:700;color:#7A3E48">創業歷程（2013–2023）</summary>
-<ul style="margin:0 0 20px;padding-left:20px;font-size:15px;line-height:1.9">
+<div style="background:#FFFFFF;border:1px solid #EAD3CE;border-radius:20px;padding:0 22px"><h3 style="margin:0;padding:18px 0 8px;font-size:17px;font-weight:700;color:#7A3E48">創業歷程（2013–2023）</h3>
+<ul style="margin:0;padding-left:20px;font-size:15px;line-height:1.9">
 <li><b>2023.8</b>　開立《戀愛會社》節目</li>
 <li><b>2023.5</b>　成為《電獺經紀》網紅</li>
 <li><b>2023.3</b>　成為《得意人生》保健食品代言人</li>
 <li><b>2022.10</b>　成立《週週趣》並創立週週趣個人工作室孵化空間</li>
+</ul>
+<details class="more"><summary class="more-btn" style="cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;min-height:44px;margin:4px 0 8px;font-size:15px;font-weight:700;color:#9B5163"><span class="lbl-more">看更多（還有 7 項）</span><span class="lbl-less">收起</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<ul style="margin:0 0 16px;padding-left:20px;font-size:15px;line-height:1.9">
 <li><b>2021.10</b>　取得《花精情緒療癒》證照</li>
 <li><b>2021.4</b>　《LiveME 直播》開立帶狀節目</li>
 <li><b>2021.3</b>　使用個人品牌形象，成立《戀愛小秘書》團隊</li>
@@ -283,13 +290,17 @@ section{scroll-margin-top:100px}
 <li><b>2018</b>　運用內容 SEO 和流量優勢，創立《尋夢新聞》</li>
 <li><b>2014</b>　帶領團隊加入 AppWorks 創業加速器，創立《eros 主題派對》</li>
 <li><b>2013</b>　留美攻讀 MBA 回台灣，接手經營《尋夢園聊天室》</li>
-</ul></details>
-<details style="background:#FFFFFF;border:1px solid #EAD3CE;border-radius:20px;padding:0 22px"><summary style="cursor:pointer;padding:18px 0;font-size:17px;font-weight:700;color:#7A3E48">媒體採訪・演講・主持經歷</summary>
-<ul style="margin:0 0 16px;padding-left:20px;font-size:15px;line-height:1.9">
+</ul>
+</details></div>
+<div style="background:#FFFFFF;border:1px solid #EAD3CE;border-radius:20px;padding:0 22px"><h3 style="margin:0;padding:18px 0 8px;font-size:17px;font-weight:700;color:#7A3E48">媒體採訪・演講・主持經歷</h3>
+<ul style="margin:0;padding-left:20px;font-size:15px;line-height:1.9">
 <li><b>2023.1</b>　DOMO HAIR《魅力無法擋》節目來賓</li>
 <li><b>2021.5</b>　代言 Starr9 女性服飾</li>
 <li><b>2019.6</b>　世代談「交友進化論」講師</li>
 <li><b>2018.7</b>　Facebook Developer Circles Taipei 活動主持人</li>
+</ul>
+<details class="more"><summary class="more-btn" style="cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;min-height:44px;margin:4px 0 8px;font-size:15px;font-weight:700;color:#9B5163"><span class="lbl-more">看更多（還有 27 項）</span><span class="lbl-less">收起</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<ul style="margin:0 0 16px;padding-left:20px;font-size:15px;line-height:1.9">
 <li><b>2018.6</b>　中原大學 人文與科技與談會 演講</li>
 <li><b>2017.7</b>　資策會 IDEAS 智慧生活駭客松 活動主持人</li>
 <li><b>2017.6</b>　上海創業中國創業路演大賽 講師</li>
@@ -320,7 +331,7 @@ section{scroll-margin-top:100px}
 </ul>
 <p style="margin:0 0 10px;font-size:15px;line-height:1.8"><b style="color:#7A3E48">代言經歷</b>　擔任共享電動機車代言人，身兼廣告模特兒，拍攝形象影片廣告、靜態看板廣告，並參與記者發表會。</p>
 <p style="margin:0 0 20px;font-size:15px;line-height:1.8"><b style="color:#7A3E48">主持經歷</b>　曾主持 Facebook 在台灣舉辦的大型 Developer Circle 活動、資策會 Ideas Show 競賽，以及無人機、機器人、智慧音箱等大小型產品發佈記者會。</p>
-</details>
+</details></div>
 </div>
 </div>
 </div>
