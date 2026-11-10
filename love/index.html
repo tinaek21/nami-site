@@ -16,6 +16,12 @@ html{scroll-behavior:smooth}
 a{color:#96471F}a:hover{color:#1F3550}
 input:focus-visible,button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #96471F;outline-offset:3px}
 section{scroll-margin-top:72px}
+.pain-link{transition:border-color .2s,box-shadow .2s}
+.pain-link:hover{border-color:#B0532A !important;box-shadow:0 10px 28px rgba(60,75,95,0.10)}
+.more-btn::-webkit-details-marker{display:none}
+details.more-story[open] .lbl-more{display:none}
+details.more-story:not([open]) .lbl-less{display:none}
+details.more-story[open] .more-btn svg{transform:rotate(180deg)}
 #partner-picker::-webkit-calendar-picker-indicator{position:absolute;top:0;left:0;right:0;bottom:0;width:auto;height:auto;margin:0;padding:0;opacity:0;cursor:pointer}
 #partner-picker::-webkit-datetime-edit{display:none}
 #partner-picker{-webkit-tap-highlight-color:transparent}
@@ -42,6 +48,8 @@ section{scroll-margin-top:100px}
 .story-head{flex:1 1 100% !important}
 .stage{padding-left:20px !important}
 .s1-cover{aspect-ratio:4 / 3 !important}
+.st-tabs{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:10px !important}
+.st-tabs button{font-size:16px !important}
 .price-card{padding:26px 20px !important}
 .final-wrap{padding:52px 16px !important;gap:28px !important}
 .final-btns a{flex:1 1 100%;justify-content:center}
@@ -61,7 +69,7 @@ section{scroll-margin-top:100px}
 <div class="nv-links" style="display:flex;flex-wrap:wrap;align-items:center;gap:4px 20px;font-size:15px">
 <a href="#method" style="color:#3E4652;text-decoration:none;padding:10px 0">三法寶</a>
 <a href="#try" style="color:#3E4652;text-decoration:none;padding:10px 0">算對方的地雷</a>
-<a href="#stories" style="color:#3E4652;text-decoration:none;padding:10px 0">三個故事</a>
+<a href="#stories" style="color:#3E4652;text-decoration:none;padding:10px 0">四個故事</a>
 <a href="#curriculum" style="color:#3E4652;text-decoration:none;padding:10px 0">課程內容</a>
 <a href="#about" style="color:#3E4652;text-decoration:none;padding:10px 0">關於娜米</a>
 <a href="#faq" style="color:#3E4652;text-decoration:none;padding:10px 0">常見問題</a>
@@ -102,26 +110,26 @@ section{scroll-margin-top:100px}
 <h2 style="margin: 0; font-family: 'Noto Serif TC',Georgia,serif; font-size: clamp(30px,4vw,46px); font-weight: 700; color: #1F3550">你一定厭倦這些狀態</h2>
 </div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:20px">
-<div class="card-pad" style="background:#FFFFFF;border:1px solid #DAD5CC;border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:12px">
+<a class="card-pad pain-link" href="#stories" data-story="1" style="background:#FFFFFF;border:1px solid #DAD5CC;border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:12px;color:inherit;text-decoration:none">
 <svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#8A6D14" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>
 <h3 style="margin:0;font-family:'Noto Serif TC',Georgia,serif;font-size:22px;font-weight:700;color:#1F3550">單身很久</h3>
 <p style="margin:0;font-size:16px;line-height:1.85">單身好多年，聊天總被句點，好不容易約出來一次，之後就沒有下文。</p>
-</div>
-<div class="card-pad" style="background:#FFFFFF;border:1px solid #DAD5CC;border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:12px">
+<span style="margin-top:auto;padding-top:4px;font-size:15px;font-weight:700;color:#96471F">看他們怎麼改變 →</span></a>
+<a class="card-pad pain-link" href="#stories" data-story="2" style="background:#FFFFFF;border:1px solid #DAD5CC;border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:12px;color:inherit;text-decoration:none">
 <svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#B0532A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9.5a2.5 2.5 0 0 1 4.8 1c0 1.7-2.3 2.2-2.3 3.5"></path><path d="M12 17h.01"></path></svg>
 <h3 style="margin:0;font-family:'Noto Serif TC',Georgia,serif;font-size:22px;font-weight:700;color:#1F3550">不敢開口</h3>
 <p style="margin:0;font-size:16px;line-height:1.85">遇到喜歡的人就變木頭，怕說錯話、怕被拒絕；好不容易聊熟了，又停在「你人很好」。</p>
-</div>
-<div class="card-pad" style="background:#FFFFFF;border:1px solid #DAD5CC;border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:12px">
+<span style="margin-top:auto;padding-top:4px;font-size:15px;font-weight:700;color:#96471F">看他們怎麼改變 →</span></a>
+<a class="card-pad pain-link" href="#stories" data-story="3" style="background:#FFFFFF;border:1px solid #DAD5CC;border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:12px;color:inherit;text-decoration:none">
 <svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#B5525A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path><path d="M12 6l-2 5h4l-2 5"></path></svg>
 <h3 style="margin:0;font-family:'Noto Serif TC',Georgia,serif;font-size:22px;font-weight:700;color:#1F3550">一直吵架</h3>
 <p style="margin:0;font-size:16px;line-height:1.85">明明很愛，卻三天兩頭就吵。每次吵完兩個人都覺得自己很委屈，感覺關係快走到盡頭。</p>
-</div>
-<div class="card-pad" style="background:#FFFFFF;border:1px solid #DAD5CC;border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:12px">
+<span style="margin-top:auto;padding-top:4px;font-size:15px;font-weight:700;color:#96471F">看他們怎麼改變 →</span></a>
+<a class="card-pad pain-link" href="#stories" data-story="4" style="background:#FFFFFF;border:1px solid #DAD5CC;border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:12px;color:inherit;text-decoration:none">
 <svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#4F5E9A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="M9 10h.01"></path><path d="M13 10h.01"></path><path d="M17 10h.01"></path></svg>
 <h3 style="margin:0;font-family:'Noto Serif TC',Georgia,serif;font-size:22px;font-weight:700;color:#1F3550">溝通沒用</h3>
 <p style="margin:0;font-size:16px;line-height:1.85">每一任都不愛溝通，講了半天只換來一句「嗯」。心好累，也越來越沒有安全感。</p>
-</div>
+<span style="margin-top:auto;padding-top:4px;font-size:15px;font-weight:700;color:#96471F">看他們怎麼改變 →</span></a>
 </div>
 <p style="margin: 36px 0 0; text-align: center; font-family: 'Noto Serif TC',Georgia,serif; font-size: 22px; font-weight: 500; line-height: 1.7; color: #1F3550">問題不是你不夠好，是你還不知道對方在意什麼</p>
 </section>
@@ -212,26 +220,40 @@ section{scroll-margin-top:100px}
 
 <section id="stories" style="background:#F6F4EF">
 <div class="sec" style="max-width:1160px;margin:0 auto;padding:88px 24px">
-<div class="sh" style="display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;margin-bottom:44px">
-<p class="eb" style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:16px;letter-spacing:8px;color:#5B6675">THREE LOVE STORIES</p>
+<div class="sh" style="display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;margin-bottom:32px">
+<p class="eb" style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:16px;letter-spacing:8px;color:#5B6675">FOUR LOVE STORIES</p>
 <h2 style="margin: 0; font-family: 'Noto Serif TC',Georgia,serif; font-size: clamp(30px,4vw,46px); font-weight: 700; color: #1F3550">這些轉變其實可以很簡單</h2>
-<p style="margin:0;font-size:17px;line-height:1.85">也許，你會在其中一個故事裡看見自己。</p>
+<p style="margin:0;font-size:17px;line-height:1.85">你是哪一種？點點看，跟你一樣的人後來怎麼了。</p>
 </div>
-<div style="display:flex;flex-direction:column;gap:32px">
-
+<div class="st-tabs" role="tablist" aria-label="選擇最像你的狀態" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;max-width:960px;margin:0 auto 24px">
+<button type="button" role="tab" id="tab-1" aria-controls="story-1" aria-selected="true" data-tab="1" style="min-height:56px;padding:8px 12px;border-radius:18px;border:1px solid #1F3550;background:#1F3550;color:#FBFAF7;font-family:'Noto Sans TC',Arial,sans-serif;font-size:17px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>單身很久</button>
+<button type="button" role="tab" id="tab-2" aria-controls="story-2" aria-selected="false" data-tab="2" style="min-height:56px;padding:8px 12px;border-radius:18px;border:1px solid #DAD5CC;background:#FFFFFF;color:#1F3550;font-family:'Noto Sans TC',Arial,sans-serif;font-size:17px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9.5a2.5 2.5 0 0 1 4.8 1c0 1.7-2.3 2.2-2.3 3.5"></path><path d="M12 17h.01"></path></svg>不敢開口</button>
+<button type="button" role="tab" id="tab-3" aria-controls="story-3" aria-selected="false" data-tab="3" style="min-height:56px;padding:8px 12px;border-radius:18px;border:1px solid #DAD5CC;background:#FFFFFF;color:#1F3550;font-family:'Noto Sans TC',Arial,sans-serif;font-size:17px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path><path d="M12 6l-2 5h4l-2 5"></path></svg>一直吵架</button>
+<button type="button" role="tab" id="tab-4" aria-controls="story-4" aria-selected="false" data-tab="4" style="min-height:56px;padding:8px 12px;border-radius:18px;border:1px solid #DAD5CC;background:#FFFFFF;color:#1F3550;font-family:'Noto Sans TC',Arial,sans-serif;font-size:17px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="M9 10h.01"></path><path d="M13 10h.01"></path><path d="M17 10h.01"></path></svg>溝通沒用</button>
+</div>
+<div role="tabpanel" id="story-1" aria-labelledby="tab-1" style="display:block;max-width:960px;margin:0 auto">
 <article style="background:#FFFFFF;border:1px solid #DAD5CC;border-radius:32px;overflow:hidden;box-shadow:0 16px 48px rgba(60,75,95,0.10)">
-<video class="s1-cover" src="assets/s1-cover.mp4" poster="assets/s2-cover.jpg" autoplay="" loop="" muted="" playsinline="" aria-label="小悠和阿凱在美術館裡牽著手，她抬頭大笑看著他" style="display:block;width:100%;aspect-ratio:2 / 1;object-fit:cover;object-position:center 30%"></video>
-<div class="story" style="padding:40px;display:flex;flex-wrap:wrap;gap:36px">
-<div class="story-head" style="flex:0 1 300px;min-width:0;display:flex;flex-direction:column;gap:16px">
-<p style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;letter-spacing:6px;color:#96471F">STORY 01</p>
-<h3 style="margin:0;font-family:'Noto Serif TC',Georgia,serif;font-size:clamp(26px,3vw,32px);font-weight:700;line-height:1.4;color:#1F3550">單身 20 年，<br>第一次追到喜歡的人</h3>
-<div style="display:flex;align-items:center;gap:10px"><span style="width:48px;height:48px;border-radius:50%;background:#F5C518;color:#4A3B10;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif TC',Georgia,serif;font-size:24px;font-weight:700">3</span><span style="font-size:15px;color:#5B6675">她是 3 號</span></div>
+<video class="s1-cover" src="assets/s1-cover.mp4" poster="assets/s2-cover.jpg" autoplay="" loop="" muted="" playsinline="" aria-label="小悠和阿凱在美術館裡牽著手，她抬頭大笑看著他" style="display:block;width:100%;aspect-ratio:21 / 9;object-fit:cover;object-position:center 30%"></video>
+<div class="story" style="padding:36px 40px;display:flex;flex-wrap:wrap;gap:32px">
+<div class="story-head" style="flex:0 1 280px;min-width:0;display:flex;flex-direction:column;gap:14px">
+<p style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:17px;letter-spacing:5px;color:#96471F">STORY 01</p>
+<h3 style="margin:0;font-family:'Noto Serif TC',Georgia,serif;font-size:clamp(24px,2.6vw,30px);font-weight:700;line-height:1.4;color:#1F3550">單身 20 年，<br>第一次追到喜歡的人</h3>
+<div style="display:flex;align-items:center;gap:8px"><span style="width:40px;height:40px;border-radius:50%;background:#F5C518;color:#4A3B10;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif TC',Georgia,serif;font-size:20px;font-weight:700">3</span></div>
 <p style="margin:0;font-size:15px;line-height:1.7;color:#5B6675">阿凱（單身 20 年）<br>小悠（3 號・愛的藝術總監）</p>
-<p style="margin:0;align-self:flex-start;padding:6px 14px;border-radius:999px;background:#FDF5DC;color:#7A5A06;font-size:14px;font-weight:700">用到：三法寶全套</p>
 </div>
-<div style="flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:22px">
+<div style="flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;flex-direction:column;gap:4px"><p style="margin:0;font-size:14px;font-weight:700;letter-spacing:2px;color:#6B707A">以前</p><p style="margin:0;font-size:17px;line-height:1.85">每天傳早安晚安，聊沒幾句就被句點，約出來一次就沒下文。</p></div>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px">
+<li style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;padding:2px 12px;border-radius:999px;background:#B5525A;color:#FFFFFF;font-size:14px;font-weight:700;line-height:1.8">地雷</span><span style="font-size:16px;line-height:1.8">3 號最怕「一成不變超無聊」，他停掉了公式化的早安晚安。</span></li>
+<li style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;padding:2px 12px;border-radius:999px;background:#8566A8;color:#FFFFFF;font-size:14px;font-weight:700;line-height:1.8">破防</span><span style="font-size:16px;line-height:1.8">傳一首歌給她：「聽到這首就想到你。」那晚聊到半夜。</span></li>
+<li style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;padding:2px 12px;border-radius:999px;background:#B07A22;color:#FFFFFF;font-size:14px;font-weight:700;line-height:1.8">必殺技</span><span style="font-size:16px;line-height:1.8">帶她去沒去過的展覽、一起捏陶，每次見面都有新鮮事。</span></li>
+</ul>
+<div style="display:flex;flex-direction:column;gap:4px"><p style="margin:0;font-size:14px;font-weight:700;letter-spacing:2px;color:#7A5A06">現在</p><p style="margin:0;font-size:17px;line-height:1.85;font-weight:700;color:#1F3550">第三次約會告白成功，第一次牽到喜歡的人的手。</p></div>
+<blockquote style="margin:0;background:#F0EEEA;border-radius:18px;padding:16px 20px;font-family:'Noto Serif TC',Georgia,serif;font-size:17px;font-weight:500;line-height:1.75;color:#1F3550">「跟他出去，每次都有新的驚喜。」<span style="display:block;margin-top:4px;font-family:'Noto Sans TC',Arial,sans-serif;font-size:14px;font-weight:400;color:#5B6675">小悠</span></blockquote>
+<details class="more-story"><summary class="more-btn" style="cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;min-height:44px;font-size:16px;font-weight:700;color:#96471F"><span class="lbl-more">看完整故事</span><span class="lbl-less">收起完整故事</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div style="display:flex;flex-direction:column;gap:22px;padding-top:12px">
 <div class="stage" style="border-left:3px solid #C8C6C1;padding-left:24px;display:flex;flex-direction:column;gap:8px"><p style="margin:0;font-size:15px;font-weight:700;letter-spacing:2px;color:#6B707A">以前</p><figure style="margin:4px 0 6px;max-width:440px"><img src="assets/s2-before.jpg" alt="阿凱晚上一個人在麵店吃麵，低頭看著手機" style="display:block;width:100%;aspect-ratio:16 / 9;object-fit:cover;border-radius:16px;filter:grayscale(1) contrast(0.95)"></figure>
-<p style="margin:0;font-size:17px;line-height:1.95">我單身了 20 年。不是沒有喜歡的人，而是每一次都停在「你人很好」。我以為每天傳早安、問吃飽沒、說晚安，就是在追。聊得很開心，卻永遠沒有下一步，久了我開始懷疑是不是自己有問題。</p></div>
+<p style="margin:0;font-size:17px;line-height:1.95">我單身了 20 年。我以為每天傳早安、問吃飽沒、說晚安，就是在追。可是聊沒幾句就被句點，好不容易約出來一次，之後就沒有下文。久了我開始懷疑，是不是自己有問題。</p></div>
 <div class="stage" style="border-left:3px solid #B9C6D4;padding-left:24px;display:flex;flex-direction:column;gap:12px"><p style="margin:0;font-size:15px;font-weight:700;letter-spacing:2px;color:#B0532A">轉折</p><figure style="margin:4px 0 6px;max-width:440px"><img src="assets/s2-turn.jpg" alt="娜米老師在客廳和阿凱對談，阿凱一臉恐然大悟" style="display:block;width:100%;aspect-ratio:16 / 9;object-fit:cover;border-radius:16px"></figure>
 <p style="margin:0;font-size:17px;line-height:1.95">學了彩虹數字，我算出她是 3 號。我把娜米老師教的三法寶，一個一個用上：</p>
 <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px">
@@ -246,42 +268,95 @@ section{scroll-margin-top:100px}
 <div class="stage" style="border-left:3px solid #F5C518;padding-left:24px;display:flex;flex-direction:column;gap:8px"><p style="margin:0;font-size:15px;font-weight:700;letter-spacing:2px;color:#7A5A06">現在</p><p style="margin:0;font-size:17px;line-height:1.95">第三次約會，我告白了。單身 20 年，我第一次牽到喜歡的人的手。</p></div>
 <div style="display:flex;align-items:center;gap:16px;margin-top:4px"><img src="assets/s2-her.jpg" alt="小悠的照片" style="flex:none;width:76px;height:76px;border-radius:50%;object-fit:cover;border:3px solid #DED8CD"><blockquote style="margin:0;flex:1;min-width:0;background:#F0EEEA;border-radius:20px;padding:20px 24px;font-family:'Noto Serif TC',Georgia,serif;font-size:18px;font-weight:500;line-height:1.8;color:#1F3550">「跟他出去，每次都有新的驚喜。後來我開始期待他的訊息了。」<span style="display:block;margin-top:6px;font-family:'Noto Sans TC',Arial,sans-serif;font-size:14px;font-weight:400;color:#5B6675">小悠</span></blockquote></div>
 </div>
+</details>
+</div>
 </div>
 </article>
-
-<article style="background: #FFFFFF; border: 1px solid #DAD5CC; border-radius: 32px; overflow: hidden; box-shadow: 0 16px 48px rgba(60,75,95,0.10)">
-<video class="s1-cover" src="assets/s2-cover.mp4" poster="assets/s1-cover.jpg" autoplay="" loop="" muted="" playsinline="" aria-label="小晴挽著阿哲的手臂，兩人坐在沙發上笑著看向彼此" style="display:block;width:100%;aspect-ratio:2 / 1;object-fit:cover;object-position:center 30%"></video>
-<div class="story" style="padding:40px;display:flex;flex-wrap:wrap;gap:36px">
-<div class="story-head" style="flex:0 1 300px;min-width:0;display:flex;flex-direction:column;gap:16px">
-<p style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;letter-spacing:6px;color:#96471F">STORY 02</p>
-<h3 style="margin:0;font-family:'Noto Serif TC',Georgia,serif;font-size:clamp(26px,3vw,32px);font-weight:700;line-height:1.4;color:#1F3550">快分手的我們，<br>後來沒有分手</h3>
-<div style="display:flex;align-items:center;gap:10px"><span style="width:48px;height:48px;border-radius:50%;background:#E85D5A;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif TC',Georgia,serif;font-size:24px;font-weight:700">1</span><span aria-hidden="true" style="font-size:20px;color:#B4BDC8">×</span><span style="width:48px;height:48px;border-radius:50%;background:#5DBE8A;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif TC',Georgia,serif;font-size:24px;font-weight:700">4</span></div>
-<p style="margin:0;font-size:15px;line-height:1.7;color:#5B6675">阿哲（1 號・愛的大學教授）<br>小晴（4 號・愛的國王皇后）</p>
-<p style="margin:0;align-self:flex-start;padding:6px 14px;border-radius:999px;background:#F2EFE9;color:#96471F;font-size:14px;font-weight:700">用到：避開地雷・加分相處</p>
 </div>
-<div style="flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:22px">
-<div class="stage" style="border-left:3px solid #C8C6C1;padding-left:24px;display:flex;flex-direction:column;gap:8px"><p style="margin: 0; font-size: 15px; font-weight: 700; letter-spacing: 2px; color: #6B707A">以前</p><figure style="margin:4px 0 6px;max-width:440px"><img src="assets/s1-before.jpg" alt="阿哲一個人坐在沙發上，望向窗外若有所思" style="display:block;width:100%;aspect-ratio:16 / 9;object-fit:cover;object-position:center 30%;border-radius:16px;filter:grayscale(1) contrast(0.95)"></figure>
+<div role="tabpanel" id="story-2" aria-labelledby="tab-2" style="display:none;max-width:960px;margin:0 auto">
+<article style="background:#FFFFFF;border:1px solid #DAD5CC;border-radius:32px;overflow:hidden;box-shadow:0 16px 48px rgba(60,75,95,0.10)">
+<video class="s1-cover" src="assets/s4-cover.mp4" poster="assets/s4-cover-poster.jpg" autoplay="" loop="" muted="" playsinline="" aria-label="思妤和阿翔並肩走在山林步道上，她笑著說話，他專心聽著微笑" style="display:block;width:100%;aspect-ratio:21 / 9;object-fit:cover;object-position:center 35%"></video>
+<div class="story" style="padding:36px 40px;display:flex;flex-wrap:wrap;gap:32px">
+<div class="story-head" style="flex:0 1 280px;min-width:0;display:flex;flex-direction:column;gap:14px">
+<p style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:17px;letter-spacing:5px;color:#96471F">STORY 02</p>
+<h3 style="margin:0;font-family:'Noto Serif TC',Georgia,serif;font-size:clamp(24px,2.6vw,30px);font-weight:700;line-height:1.4;color:#1F3550">一見到她就當機，<br>後來一句話就開了頭</h3>
+<div style="display:flex;align-items:center;gap:8px"><span style="width:40px;height:40px;border-radius:50%;background:#F7A14A;color:#4A2A08;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif TC',Georgia,serif;font-size:20px;font-weight:700">2</span></div>
+<p style="margin:0;font-size:15px;line-height:1.7;color:#5B6675">阿翔（35 歲・工程師）<br>思妤（2 號・愛的合夥人）</p>
+</div>
+<div style="flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;flex-direction:column;gap:4px"><p style="margin:0;font-size:14px;font-weight:700;letter-spacing:2px;color:#6B707A">以前</p><p style="margin:0;font-size:17px;line-height:1.85">暗戀同事快一年，一見到她腦袋就空白，只會說「嗨」。</p></div>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px">
+<li style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;padding:2px 12px;border-radius:999px;background:#B5525A;color:#FFFFFF;font-size:14px;font-weight:700;line-height:1.8">地雷</span><span style="font-size:16px;line-height:1.8">2 號最怕「太直接」，他放下了「一定要告白」的壓力。</span></li>
+<li style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;padding:2px 12px;border-radius:999px;background:#8566A8;color:#FFFFFF;font-size:14px;font-weight:700;line-height:1.8">破防</span><span style="font-size:16px;line-height:1.8">第一句話：「我要買禮物給我媽，可以幫我看一下哪個好嗎？」</span></li>
+<li style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;padding:2px 12px;border-radius:999px;background:#B07A22;color:#FFFFFF;font-size:14px;font-weight:700;line-height:1.8">必殺技</span><span style="font-size:16px;line-height:1.8">每次吃飯多問一句「那你覺得呢？」，然後好好聽她說完。</span></li>
+</ul>
+<div style="display:flex;flex-direction:column;gap:4px"><p style="margin:0;font-size:14px;font-weight:700;letter-spacing:2px;color:#8A4B0C">現在</p><p style="margin:0;font-size:17px;line-height:1.85;font-weight:700;color:#1F3550">每週一起吃午餐，上個月第一次在週末單獨約她出去。</p></div>
+<blockquote style="margin:0;background:#F0EEEA;border-radius:18px;padding:16px 20px;font-family:'Noto Serif TC',Georgia,serif;font-size:17px;font-weight:500;line-height:1.75;color:#1F3550">「他話不多，但每次都很認真聽我說。」<span style="display:block;margin-top:4px;font-family:'Noto Sans TC',Arial,sans-serif;font-size:14px;font-weight:400;color:#5B6675">思妤</span></blockquote>
+<details class="more-story"><summary class="more-btn" style="cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;min-height:44px;font-size:16px;font-weight:700;color:#96471F"><span class="lbl-more">看完整故事</span><span class="lbl-less">收起完整故事</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div style="display:flex;flex-direction:column;gap:22px;padding-top:12px">
+<div class="stage" style="border-left:3px solid #C8C6C1;padding-left:24px;display:flex;flex-direction:column;gap:8px"><p style="margin:0;font-size:15px;font-weight:700;letter-spacing:2px;color:#6B707A">以前</p><figure style="margin:4px 0 6px;max-width:440px"><img src="assets/s4-before.jpg" alt="茶水間裡，阿翔端著馬克杯站在泡咖啡的思妤旁邊，表情僵硬說不出話" style="display:block;width:100%;aspect-ratio:16 / 9;object-fit:cover;border-radius:16px;filter:grayscale(1) contrast(0.95)"></figure><p style="margin:0;font-size:17px;line-height:1.95">我暗戀隔壁部門的思妤快一年。每次在茶水間遇到她，腦袋就一片空白，想好的話全忘光，只會點頭說「嗨」。我以為要追她，就得很會聊、很敢告白，偏偏這兩件事我都不會。</p></div>
+<div class="stage" style="border-left:3px solid #B9C6D4;padding-left:24px;display:flex;flex-direction:column;gap:8px"><p style="margin:0;font-size:15px;font-weight:700;letter-spacing:2px;color:#B0532A">轉折</p><figure style="margin:4px 0 6px;max-width:440px"><img src="assets/s4-nami.jpg" alt="娜米老師拿著數字卡片和阿翔對談，阿翔一臉恍然大悟" style="display:block;width:100%;aspect-ratio:16 / 9;object-fit:cover;border-radius:16px"></figure><p style="margin:0;font-size:17px;line-height:1.95">上了娜米老師的課，我算出她是 2 號。2 號的地雷是<b style="color:#1F3550">「太直接我會怕」</b>。原來我一直逼自己鼓起勇氣大告白，反而是最不適合她的方式。2 號最在乎被傾聽、被需要，我不用很會講，只要會問、會聽。</p></div>
+<div class="stage" style="border-left:3px solid #F7A14A;padding-left:24px;display:flex;flex-direction:column;gap:8px"><p style="margin:0;font-size:15px;font-weight:700;letter-spacing:2px;color:#8A4B0C">現在</p><figure style="margin:4px 0 6px;max-width:440px"><img src="assets/s4-now.jpg" alt="午餐時間，思妤開心地比手勢說話，阿翔專心聽著微笑" style="display:block;width:100%;aspect-ratio:16 / 9;object-fit:cover;border-radius:16px"></figure><p style="margin:0;font-size:17px;line-height:1.95">我們現在每週一起吃午餐，上個月我第一次在週末約她去走步道。我還是話不多，但我知道，她要的本來就不是一個很會講的人。</p></div>
+<div style="display:flex;align-items:center;gap:16px;margin-top:4px"><img src="assets/s4-siyu.jpg" alt="思妤的照片" style="flex:none;width:76px;height:76px;border-radius:50%;object-fit:cover;border:3px solid #DED8CD"><blockquote style="margin:0;flex:1;min-width:0;background:#F0EEEA;border-radius:20px;padding:20px 24px;font-family:'Noto Serif TC',Georgia,serif;font-size:18px;font-weight:500;line-height:1.8;color:#1F3550">「他話不多，但每次都很認真聽我說。跟他在一起，我很安心。」<span style="display:block;margin-top:6px;font-family:'Noto Sans TC',Arial,sans-serif;font-size:14px;font-weight:400;color:#5B6675">思妤</span></blockquote></div>
+</div>
+</details>
+</div>
+</div>
+</article>
+</div>
+<div role="tabpanel" id="story-3" aria-labelledby="tab-3" style="display:none;max-width:960px;margin:0 auto">
+<article style="background:#FFFFFF;border:1px solid #DAD5CC;border-radius:32px;overflow:hidden;box-shadow:0 16px 48px rgba(60,75,95,0.10)">
+<video class="s1-cover" src="assets/s2-cover.mp4" poster="assets/s1-cover.jpg" autoplay="" loop="" muted="" playsinline="" aria-label="小晴挽著阿宏的手臂，兩人坐在沙發上笑著看向彼此" style="display:block;width:100%;aspect-ratio:21 / 9;object-fit:cover;object-position:center 30%"></video>
+<div class="story" style="padding:36px 40px;display:flex;flex-wrap:wrap;gap:32px">
+<div class="story-head" style="flex:0 1 280px;min-width:0;display:flex;flex-direction:column;gap:14px">
+<p style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:17px;letter-spacing:5px;color:#96471F">STORY 03</p>
+<h3 style="margin:0;font-family:'Noto Serif TC',Georgia,serif;font-size:clamp(24px,2.6vw,30px);font-weight:700;line-height:1.4;color:#1F3550">快分手的我們，<br>後來沒有分手</h3>
+<div style="display:flex;align-items:center;gap:8px"><span style="width:40px;height:40px;border-radius:50%;background:#E85D5A;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif TC',Georgia,serif;font-size:20px;font-weight:700">1</span><span aria-hidden="true" style="font-size:18px;color:#B4BDC8">×</span><span style="width:40px;height:40px;border-radius:50%;background:#5DBE8A;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif TC',Georgia,serif;font-size:20px;font-weight:700">4</span></div>
+<p style="margin:0;font-size:15px;line-height:1.7;color:#5B6675">阿宏（1 號・愛的大學教授）<br>小晴（4 號・愛的國王皇后）</p>
+</div>
+<div style="flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;flex-direction:column;gap:4px"><p style="margin:0;font-size:14px;font-weight:700;letter-spacing:2px;color:#6B707A">以前</p><p style="margin:0;font-size:17px;line-height:1.85">交往三年，一週吵三次。他愛給驚喜，她卻每次都不開心。</p></div>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px">
+<li style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;padding:2px 12px;border-radius:999px;background:#B5525A;color:#FFFFFF;font-size:14px;font-weight:700;line-height:1.8">地雷</span><span style="font-size:16px;line-height:1.8">4 號最怕「驚喜會嚇死我」，他不再臨時訂餐廳、說走就走。</span></li>
+<li style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;padding:2px 12px;border-radius:999px;background:#B07A22;color:#FFFFFF;font-size:14px;font-weight:700;line-height:1.8">必殺技</span><span style="font-size:16px;line-height:1.8">生日前兩週把行程攤開給她看：「我想帶你去這裡，你覺得可以嗎？」</span></li>
+</ul>
+<div style="display:flex;flex-direction:column;gap:4px"><p style="margin:0;font-size:14px;font-weight:700;letter-spacing:2px;color:#2F6B47">現在</p><p style="margin:0;font-size:17px;line-height:1.85;font-weight:700;color:#1F3550">還是會意見不同，但再也沒有吵到想分手。</p></div>
+<blockquote style="margin:0;background:#F0EEEA;border-radius:18px;padding:16px 20px;font-family:'Noto Serif TC',Georgia,serif;font-size:17px;font-weight:500;line-height:1.75;color:#1F3550">「他現在會先問我。被尊重的感覺，讓我不再一直想管他。」<span style="display:block;margin-top:4px;font-family:'Noto Sans TC',Arial,sans-serif;font-size:14px;font-weight:400;color:#5B6675">小晴</span></blockquote>
+<details class="more-story"><summary class="more-btn" style="cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;min-height:44px;font-size:16px;font-weight:700;color:#96471F"><span class="lbl-more">看完整故事</span><span class="lbl-less">收起完整故事</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div style="display:flex;flex-direction:column;gap:22px;padding-top:12px">
+<div class="stage" style="border-left:3px solid #C8C6C1;padding-left:24px;display:flex;flex-direction:column;gap:8px"><p style="margin: 0; font-size: 15px; font-weight: 700; letter-spacing: 2px; color: #6B707A">以前</p><figure style="margin:4px 0 6px;max-width:440px"><img src="assets/s1-before.jpg" alt="阿宏一個人坐在沙發上，望向窗外若有所思" style="display:block;width:100%;aspect-ratio:16 / 9;object-fit:cover;object-position:center 30%;border-radius:16px;filter:grayscale(1) contrast(0.95)"></figure>
 <p style="margin:0;font-size:17px;line-height:1.95">交往第三年，我們一個禮拜可以吵三次。我喜歡給她驚喜，臨時訂好餐廳、週末說走就走，可是她每次都不開心。我覺得她難搞，她覺得我不尊重她。最後一次大吵，我們都說出了「分手」兩個字。</p></div>
-<div class="stage" style="border-left:3px solid #B9C6D4;padding-left:24px;display:flex;flex-direction:column;gap:8px"><p style="margin:0;font-size:15px;font-weight:700;letter-spacing:2px;color:#B0532A">轉折</p><figure style="margin:4px 0 6px;max-width:440px"><img src="assets/s1-turn.jpg" alt="娜米老師在客廳和阿哲、小晴對談" style="display:block;width:100%;aspect-ratio:16 / 9;object-fit:cover;border-radius:16px"></figure>
+<div class="stage" style="border-left:3px solid #B9C6D4;padding-left:24px;display:flex;flex-direction:column;gap:8px"><p style="margin:0;font-size:15px;font-weight:700;letter-spacing:2px;color:#B0532A">轉折</p><figure style="margin:4px 0 6px;max-width:440px"><img src="assets/s1-turn.jpg" alt="娜米老師在客廳和阿宏、小晴對談" style="display:block;width:100%;aspect-ratio:16 / 9;object-fit:cover;border-radius:16px"></figure>
 <p style="margin:0;font-size:17px;line-height:1.95">上了娜米老師的課，我算出她是 4 號。4 號的地雷寫著：<b style="color:#1F3550">「驚喜會嚇死我」</b>。我愣了好久，原來我以為的浪漫，一直在踩她的地雷。不是她難搞，是我用錯方式愛她。</p></div>
-<div class="stage" style="border-left:3px solid #5DBE8A;padding-left:24px;display:flex;flex-direction:column;gap:8px"><p style="margin:0;font-size:15px;font-weight:700;letter-spacing:2px;color:#2F6B47">現在</p><figure style="margin:4px 0 6px;max-width:440px"><img src="assets/s1-now.jpg" alt="阿哲說話時，小晴把手搭在他的手臂上看著他" style="display:block;width:100%;aspect-ratio:16 / 9;object-fit:cover;object-position:center 30%;border-radius:16px"></figure>
+<div class="stage" style="border-left:3px solid #5DBE8A;padding-left:24px;display:flex;flex-direction:column;gap:8px"><p style="margin:0;font-size:15px;font-weight:700;letter-spacing:2px;color:#2F6B47">現在</p><figure style="margin:4px 0 6px;max-width:440px"><img src="assets/s1-now.jpg" alt="阿宏說話時，小晴把手搭在他的手臂上看著他" style="display:block;width:100%;aspect-ratio:16 / 9;object-fit:cover;object-position:center 30%;border-radius:16px"></figure>
 <p style="margin:0;font-size:17px;line-height:1.95">她生日前兩週，我把行程攤開給她看：「我想帶你去這裡，你覺得可以嗎？」她看了很久，說：「你怎麼變得這麼懂我。」我們還是會意見不同，但再也沒有吵到想分手。</p></div>
 <div style="display:flex;align-items:center;gap:16px;margin-top:4px"><img src="assets/s1-her.jpg" alt="小晴的照片" style="flex:none;width:76px;height:76px;border-radius:50%;object-fit:cover;object-position:center 20%;border:3px solid #DED8CD"><blockquote style="margin:0;flex:1;min-width:0;background:#F0EEEA;border-radius:20px;padding:20px 24px;font-family:'Noto Serif TC',Georgia,serif;font-size:18px;font-weight:500;line-height:1.8;color:#1F3550">「他現在會先問我。被尊重的感覺，讓我不再一直想管他。」<span style="display:block;margin-top:6px;font-family:'Noto Sans TC',Arial,sans-serif;font-size:14px;font-weight:400;color:#5B6675">小晴</span></blockquote></div>
 </div>
+</details>
+</div>
 </div>
 </article>
-
-<article style="background:#FFFFFF;border:1px solid #DAD5CC;border-radius:32px;overflow:hidden;box-shadow:0 16px 48px rgba(60,75,95,0.10)">
-<video class="s1-cover" src="assets/s3-cover.mp4" poster="assets/s3-cover.jpg" autoplay="" loop="" muted="" playsinline="" aria-label="小雯和阿傑窩在沙發上蓋著毯子一起大笑" style="display:block;width:100%;aspect-ratio:2 / 1;object-fit:cover;object-position:center 35%"></video>
-<div class="story" style="padding: 40px; display: flex; flex-wrap: wrap; gap: 36px">
-<div class="story-head" style="flex:0 1 300px;min-width:0;display:flex;flex-direction:column;gap:16px">
-<p style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;letter-spacing:6px;color:#96471F">STORY 03</p>
-<h3 style="margin:0;font-family:'Noto Serif TC',Georgia,serif;font-size:clamp(26px,3vw,32px);font-weight:700;line-height:1.4;color:#1F3550">從「說了等於沒說」，<br>到我們有自己的暗號</h3>
-<div style="display:flex;align-items:center;gap:10px"><span style="width:48px;height:48px;border-radius:50%;background:#F5C518;color:#4A3B10;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif TC',Georgia,serif;font-size:24px;font-weight:700">3</span><span aria-hidden="true" style="font-size:20px;color:#B4BDC8">×</span><span style="width:48px;height:48px;border-radius:50%;background:#9B6FD8;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif TC',Georgia,serif;font-size:24px;font-weight:700">7</span></div>
-<p style="margin:0;font-size:15px;line-height:1.7;color:#5B6675">小雯（3 號・愛的藝術總監）<br>阿傑（7 號・愛的幸運兒）</p>
-<p style="margin:0;align-self:flex-start;padding:6px 14px;border-radius:999px;background:#F1ECF7;color:#5E4785;font-size:14px;font-weight:700">兩個人一起學</p>
 </div>
-<div style="flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:22px">
+<div role="tabpanel" id="story-4" aria-labelledby="tab-4" style="display:none;max-width:960px;margin:0 auto">
+<article style="background:#FFFFFF;border:1px solid #DAD5CC;border-radius:32px;overflow:hidden;box-shadow:0 16px 48px rgba(60,75,95,0.10)">
+<video class="s1-cover" src="assets/s3-cover.mp4" poster="assets/s3-cover.jpg" autoplay="" loop="" muted="" playsinline="" aria-label="小雯和阿傑窩在沙發上蓋著毯子一起大笑" style="display:block;width:100%;aspect-ratio:21 / 9;object-fit:cover;object-position:center 35%"></video>
+<div class="story" style="padding:36px 40px;display:flex;flex-wrap:wrap;gap:32px">
+<div class="story-head" style="flex:0 1 280px;min-width:0;display:flex;flex-direction:column;gap:14px">
+<p style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:17px;letter-spacing:5px;color:#96471F">STORY 04</p>
+<h3 style="margin:0;font-family:'Noto Serif TC',Georgia,serif;font-size:clamp(24px,2.6vw,30px);font-weight:700;line-height:1.4;color:#1F3550">從「說了等於沒說」，<br>到我們有自己的暗號</h3>
+<div style="display:flex;align-items:center;gap:8px"><span style="width:40px;height:40px;border-radius:50%;background:#F5C518;color:#4A3B10;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif TC',Georgia,serif;font-size:20px;font-weight:700">3</span><span aria-hidden="true" style="font-size:18px;color:#B4BDC8">×</span><span style="width:40px;height:40px;border-radius:50%;background:#9B6FD8;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif TC',Georgia,serif;font-size:20px;font-weight:700">7</span></div>
+<p style="margin:0;font-size:15px;line-height:1.7;color:#5B6675">小雯（3 號・愛的藝術總監）<br>阿傑（7 號・愛的幸運兒）</p>
+</div>
+<div style="flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;flex-direction:column;gap:4px"><p style="margin:0;font-size:14px;font-weight:700;letter-spacing:2px;color:#6B707A">以前</p><p style="margin:0;font-size:17px;line-height:1.85">她講了半天，他只回一句「嗯」。她越講越沒安全感，他越聽越安靜。</p></div>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px">
+<li style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;padding:2px 12px;border-radius:999px;background:#B5525A;color:#FFFFFF;font-size:14px;font-weight:700;line-height:1.8">地雷</span><span style="font-size:16px;line-height:1.8">7 號最怕「這個你講過了」，她不再重複同一件事。</span></li>
+<li style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;padding:2px 12px;border-radius:999px;background:#B07A22;color:#FFFFFF;font-size:14px;font-weight:700;line-height:1.8">必殺技</span><span style="font-size:16px;line-height:1.8">兩人的暗號：「今天的三分鐘小會議，可以嗎？」「可以，一個重點就好。」</span></li>
+</ul>
+<div style="display:flex;flex-direction:column;gap:4px"><p style="margin:0;font-size:14px;font-weight:700;letter-spacing:2px;color:#5E4785">現在</p><p style="margin:0;font-size:17px;line-height:1.85;font-weight:700;color:#1F3550">他知道她想講，她也知道要講重點，兩個人都不用再猜。</p></div>
+<blockquote style="margin:0;background:#F0EEEA;border-radius:18px;padding:16px 20px;font-family:'Noto Serif TC',Georgia,serif;font-size:17px;font-weight:500;line-height:1.75;color:#1F3550">「現在我知道，她只是想被聽見。」<span style="display:block;margin-top:4px;font-family:'Noto Sans TC',Arial,sans-serif;font-size:14px;font-weight:400;color:#5B6675">阿傑</span></blockquote>
+<details class="more-story"><summary class="more-btn" style="cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;min-height:44px;font-size:16px;font-weight:700;color:#96471F"><span class="lbl-more">看完整故事</span><span class="lbl-less">收起完整故事</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div style="display:flex;flex-direction:column;gap:22px;padding-top:12px">
 <div class="stage" style="border-left:3px solid #C8C6C1;padding-left:24px;display:flex;flex-direction:column;gap:8px"><p style="margin:0;font-size:15px;font-weight:700;letter-spacing:2px;color:#6B707A">以前</p><figure style="margin:4px 0 6px;max-width:440px"><img src="assets/s3-before.jpg" alt="小雯對著阿傑用力說話，阿傑坐在沙發另一頭低頭滑手機" style="display:block;width:100%;aspect-ratio:16 / 9;object-fit:cover;border-radius:16px;filter:grayscale(1) contrast(0.95)"></figure>
 <p style="margin:0;font-size:17px;line-height:1.95">我發現我歷任男友都不愛溝通。我講了半天，他只回一句「嗯」。我越沒安全感就越想講，他越聽越安靜。每次都是我一個人在說，說到最後連我都不知道自己在幹嘛。心好累。</p></div>
 <div class="stage" style="border-left:3px solid #B9C6D4;padding-left:24px;display:flex;flex-direction:column;gap:8px"><p style="margin:0;font-size:15px;font-weight:700;letter-spacing:2px;color:#B0532A">轉折</p><figure style="margin:4px 0 6px;max-width:440px"><img src="assets/s3-turn.jpg" alt="娜米老師和小雯、阿傑對談，小雯驚訝地摗住嘴" style="display:block;width:100%;aspect-ratio:16 / 9;object-fit:cover;border-radius:16px"></figure>
@@ -290,12 +365,13 @@ section{scroll-margin-top:100px}
 <p style="margin:0;font-size:17px;line-height:1.95">我們有了一個暗號。我想聊的時候會說：「今天的三分鐘小會議，可以嗎？」他會笑著說：「可以，一個重點就好。」他知道我想講，我也知道要講重點，兩個人都不用再猜。</p></div>
 <div style="display:flex;align-items:center;gap:16px;margin-top:4px"><img src="assets/s3-him.jpg" alt="阿傑的照片" style="flex:none;width:76px;height:76px;border-radius:50%;object-fit:cover;border:3px solid #DED8CD"><blockquote style="margin:0;flex:1;min-width:0;background:#F0EEEA;border-radius:20px;padding:20px 24px;font-family:'Noto Serif TC',Georgia,serif;font-size:18px;font-weight:500;line-height:1.8;color:#1F3550">「以前她一開口，我就覺得又要被唸了。現在我知道，她只是想被聽見。」<span style="display:block;margin-top:6px;font-family:'Noto Sans TC',Arial,sans-serif;font-size:14px;font-weight:400;color:#5B6675">阿傑</span></blockquote></div>
 </div>
+</details>
+</div>
 </div>
 </article>
-
 </div>
 <div style="margin-top:40px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center">
-<p style="margin:0;font-family:'Noto Serif TC',Georgia,serif;font-size:clamp(22px,2.8vw,28px);font-weight:700;line-height:1.5;color:#1F3550">你最像哪一個故事？<br>下一個主角，可以是你。</p>
+<p style="margin:0;font-family:'Noto Serif TC',Georgia,serif;font-size:clamp(22px,2.8vw,28px);font-weight:700;line-height:1.5;color:#1F3550">下一個主角，可以是你。</p>
 <a href="#pricing" style="display:inline-flex;align-items:center;min-height:52px;padding:0 34px;border-radius:999px;background:#B0532A;color:#FBFAF7;text-decoration:none;font-size:17px;font-weight:700">我也想這樣，立即報名</a>
 </div>
 <p style="margin:28px 0 0;text-align:center;font-size:14px;line-height:1.7;color:#5B6675">以上故事依娜米諮詢中常見的感情情境改寫，人物姓名與細節為示意。</p>
@@ -524,6 +600,22 @@ $('partner-picker').addEventListener('click', function (e) {
 $('partner-picker').addEventListener('change', function (e) {
   var v = (e.target.value || '').replace(/-/g, '/');
   if (v) { $('partner').value = v; calcBirth(v); }
+});
+function pickStory(k) {
+  ['1', '2', '3', '4'].forEach(function (i) {
+    var t = $('tab-' + i), on = i === k;
+    t.setAttribute('aria-selected', String(on));
+    t.style.background = on ? '#1F3550' : '#FFFFFF';
+    t.style.color = on ? '#FBFAF7' : '#1F3550';
+    t.style.borderColor = on ? '#1F3550' : '#DAD5CC';
+    $('story-' + i).style.display = on ? 'block' : 'none';
+  });
+}
+Array.prototype.forEach.call(document.querySelectorAll('[data-tab]'), function (b) {
+  b.addEventListener('click', function () { pickStory(b.getAttribute('data-tab')); });
+});
+Array.prototype.forEach.call(document.querySelectorAll('[data-story]'), function (a) {
+  a.addEventListener('click', function () { pickStory(a.getAttribute('data-story')); });
 });
 var soundOn = '';
 var soundBtns = Array.prototype.slice.call(document.querySelectorAll('.sound-btn'));
