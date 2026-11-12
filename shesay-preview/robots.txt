@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://shesay.com
+Sitemap: https://shesay.com/sitemap.xml
