@@ -1,5 +1,5 @@
-:HL["/shesay-preview/_next/static/chunks/17h~iagzroak-.css","style"]
+:HL["/shesay-preview/_next/static/chunks/0t5z90y7i3mr4.css","style"]
 :HL["https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap","style"]
 :HL["https://shesay.com/images/loveok/71991-cover.jpg","image"]
 :HL["https://shesay.com/images/loveok/f19e8d1749e3.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":20,"slots":{"children":{"name":"loveok","param":null,"prefetchHints":0,"slots":{"children":{"name":"id","param":{"type":"d","key":"71991","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"-hnGINXRg9jFjbnDq_Zia"}
+0:{"tree":{"name":"","param":null,"prefetchHints":20,"slots":{"children":{"name":"loveok","param":null,"prefetchHints":0,"slots":{"children":{"name":"id","param":{"type":"d","key":"71991","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"Uwo2Ak3sauD2QtLpV6osp"}
