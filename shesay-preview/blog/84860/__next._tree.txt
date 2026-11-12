@@ -1,4 +1,4 @@
-:HL["/shesay-preview/_next/static/chunks/10m4hdeuem4j3.css","style"]
+:HL["/shesay-preview/_next/static/chunks/17h~iagzroak-.css","style"]
 :HL["https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap","style"]
 :HL["https://shesay.com/images/original/shesay.com/wp-content/uploads/2023/11/2.jepg_-2048x1600.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":20,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"id","param":{"type":"d","key":"84860","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"f9jTWocRgF7SnsgF8dfW_"}
+0:{"tree":{"name":"","param":null,"prefetchHints":20,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"id","param":{"type":"d","key":"84860","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"-hnGINXRg9jFjbnDq_Zia"}
